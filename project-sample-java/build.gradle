@@ -1,0 +1,14 @@
+apply from: "./gradle/libs/devops-base/devops.gradle"
+
+description 'The sample project for https://github.com/bizobj/tools.gradle/tree/master/project-tmpl/java-lib'
+group 'org.bizobj.devops.projectsamplejava'
+version '1.0'
+
+archivesBaseName = "bizobj-devops-sample-java"
+eclipse.project.name = "bizobj-devops-sample-java"
+
+devOpsApply from: "deps.gradle"
+
+devOpsDefineExports (
+	include: [], exclude: ["*.jar"]
+)
